@@ -18,11 +18,11 @@ public class ClonadorPersona {
 	public List<Persona> generarClon(){
 		
 		List<Persona> personas = new ArrayList<Persona>();
-		for(int i=0;i>=10;i++) {
+		for(int i=0;i<=10;i++) {
 			Persona p= new Persona(nombre,(int)(Math.random()*101),(int)(Math.random()*201),(int)(Math.random()*100));
 			personas.add(p);
 		}
-		return personas;
-		
+		return personas;	
 	}
+	
 }
