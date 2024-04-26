@@ -3,6 +3,7 @@ package clonadorPersona;
 import java.util.ArrayList;
 import java.util.List;
 import persona.Persona;
+import utilidades.FactoryPersona;
 
 /**
  * Clase ClonadorPersona que clonara la persona que queremos
@@ -19,8 +20,9 @@ public class ClonadorPersona {
 		
 		List<Persona> personas = new ArrayList<Persona>();
 		for(int i=0;i<=10;i++) {
-			Persona p= new Persona(nombre,(int)(Math.random()*101),(int)(Math.random()*201),(int)(Math.random()*100));
-			personas.add(p);
+			Persona p= FactoryPersona.getPersona(nombre);
+			
+			personas.add(0,p);
 		}
 		return personas;	
 	}
