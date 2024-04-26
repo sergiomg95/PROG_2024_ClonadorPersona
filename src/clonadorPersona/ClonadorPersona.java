@@ -20,9 +20,12 @@ public class ClonadorPersona {
 		
 		List<Persona> personas = new ArrayList<Persona>();
 		for(int i=0;i<=10;i++) {
-			Persona p= FactoryPersona.getPersona(nombre);
 			
+			try {
+			Persona p= FactoryPersona.getPersona(nombre);
 			personas.add(0,p);
+			}
+			catch(Exception e) {}
 		}
 		return personas;	
 	}
